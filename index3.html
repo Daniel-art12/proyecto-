@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Recomendaciones de Ahorro Energético</title>
+  <style>
+    .boton-regresar {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 0;
+  padding: 12px 25px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-regresar:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+    .boton-regresar {
+  display: inline-block;
+  margin: 40px auto 0;
+  padding: 12px 25px;
+  background-color: #000000;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.2);
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-regresar:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      transition: background-color 0.5s, color 0.5s;
+    }
+
+    .recomendaciones {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    .recomendaciones h2 {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    .recomendaciones ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    .recomendaciones li {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+    }
+
+    /* Animación scroll */
+    .scroll-fade {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .scroll-fade.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Modo oscuro opcional */
+    body.dark-mode {
+      background-color: #121212;
+      color: #eee;
+    }
+
+    body.dark-mode .recomendaciones {
+      background-color: #1e1e1e;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+
+    #modoOscuroBtn {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #444;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    #modoOscuroBtn:hover {
+      background-color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="modoOscuroBtn" onclick="toggleDarkMode()">Modo Oscuro</button>
+
+  <section class="recomendaciones scroll-fade">
+    <h2>Recomendaciones para Reducir el Consumo de Electricidad</h2>
+    <ul>
+      <li>Apaga las luces y aparatos eléctricos cuando no los estés utilizando.</li>
+      <li>Usa bombillas LED o de bajo consumo en lugar de incandescentes.</li>
+      <li>Desconecta los electrodomésticos que no estén en uso prolongado (evita el "consumo vampiro").</li>
+      <li>Aprovecha al máximo la luz natural durante el día.</li>
+      <li>Reduce el uso de aires acondicionados y calefactores, y mantén una temperatura moderada.</li>
+      <li>Usa electrodomésticos eficientes con etiqueta energética clase A o superior.</li>
+      <li>Lava la ropa con agua fría y usa la lavadora con cargas completas.</li>
+      <li>Planifica el uso de energía en horas de menor demanda si tienes tarifa diferencial.</li>
+      <li>Mantén limpias las rejillas y filtros de refrigeradores y aires acondicionados.</li>
+      <li>Hierve solo la cantidad de agua necesaria al usar hervidores eléctricos.</li>
+      <li>Evita abrir la puerta del horno o refrigerador innecesariamente.</li>
+      <li>Descongela el congelador regularmente para que trabaje de forma eficiente.</li>
+      <li>Utiliza regletas con interruptor para apagar múltiples dispositivos a la vez.</li>
+      <li>Reemplaza aparatos antiguos por modelos modernos más eficientes energéticamente.</li>
+      <li>Si usas laptop, prefierela sobre una PC de escritorio: consume menos energía.</li>
+      <li>No dejes el cargador del celular enchufado cuando no lo uses.</li>
+      <li>Pinta las paredes interiores con colores claros para aprovechar mejor la luz natural.</li>
+      <li>Instala sensores de movimiento en zonas comunes para evitar luces encendidas todo el tiempo.</li>
+      <li>Seca la ropa al aire libre en lugar de usar secadora eléctrica cuando sea posible.</li>
+      <li>Realiza mantenimientos periódicos a tus equipos eléctricos para asegurar su eficiencia.</li>
+    </ul>
+  </section>
+  
+
+  <script>
+    // Animación scroll
+    window.addEventListener('DOMContentLoaded', () => {
+      const animated = document.querySelectorAll('.scroll-fade');
+
+      const reveal = () => {
+        animated.forEach(el => {
+          const rect = el.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            el.classList.add('visible');
+          }
+        });
+      };
+
+      window.addEventListener('scroll', reveal);
+      reveal();
+    });
+
+    // Modo oscuro
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+  </script>
+<a href="index m.html" class="boton-regresar">← Regresar al Inicio del Simulador</a>
+
+
+
+</body>
+</html>

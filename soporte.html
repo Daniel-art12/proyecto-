@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Soporte Técnico</title>
+  <style>
+     .dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
+  .dark-mode table,
+  .dark-mode form,
+  .dark-mode .faq {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+  }
+
+  .dark-mode th {
+    background-color: #555;
+  }
+
+  .dark-mode tr:hover {
+    background-color: #2a2a2a;
+  }
+
+  .dark-mode input,
+  .dark-mode textarea {
+    background-color: #2e2e2e;
+    color: white;
+    border: 1px solid #555;
+  }
+
+  .dark-mode button,
+  .dark-mode .back-button {
+    background-color: #444 !important;
+    color: white;
+  }
+
+  .dark-mode button:hover,
+  .dark-mode .back-button:hover {
+    background-color: #666 !important;
+  }
+
+  .dark-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  .dark-toggle:hover {
+    background-color: #1c5980;
+  }
+   body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    p {
+      text-align: center;
+      color: #34495e;
+    }
+
+    table {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: white;
+    }
+
+    th, td {
+      padding: 14px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f2f2f2;
+    }
+
+    form {
+      width: 90%;
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #2980b9;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1c5980;
+    }
+
+    .faq {
+      width: 90%;
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .back-button {
+      display: block;
+      margin: 40px auto;
+      text-align: center;
+      background-color: #34495e;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      width: 250px;
+      text-align: center;
+    }
+
+    .back-button:hover {
+      background-color: #2c3e50;
+    }
+
+    /* 🌙 Modo oscuro */
+    .dark-mode {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+
+    .dark-mode table {
+      background-color: #1e1e1e;
+      color: #e0e0e0;
+    }
+
+    .dark-mode th {
+      background-color: #2c3e50;
+    }
+
+    .dark-mode td {
+      border-color: #444;
+    }
+
+    .dark-mode form,
+    .dark-mode .faq {
+      background-color: #1e1e1e;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+    }
+
+    .dark-mode input,
+    .dark-mode textarea {
+      background-color: #2b2b2b;
+      color: #fff;
+      border: 1px solid #555;
+    }
+
+    .dark-mode .back-button,
+    .dark-mode button {
+      background-color: #2980b9;
+    }
+
+    .dark-mode .back-button:hover,
+    .dark-mode button:hover {
+      background-color: #1c5980;
+    }
+    .toggle-dark {
+    display: block;
+    margin: 0 auto 20px;
+    background-color: #444
+  }
+  </style>
+</head>
+<body>
+ 
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌓 Modo Oscuro</button>
+
+
+  <h1>Soporte Técnico</h1>
+  <p>¿Tienes un problema con la plataforma? Aquí te ayudamos.</p>
+
+  <h2>Equipo de Soporte</h2>
+  <table>
+    <tr>
+      <th>Nombre</th>
+      <th>Teléfono</th>
+      <th>Correo</th>
+    </tr>
+    <tr>
+      <td>Yeilis Vanessa</td>
+      <td>+57 301 123 4567</td>
+      <td>yeilis.vanessa@soporte.com</td>
+    </tr>
+    <tr>
+      <td>Erika Sandoval</td>
+      <td>+57 302 234 5678</td>
+      <td>erika.sandoval@soporte.com</td>
+    </tr>
+    <tr>
+      <td>Michael Martínez</td>
+      <td>+57 303 345 6789</td>
+      <td>michael.martinez@soporte.com</td>
+    </tr>
+    <tr>
+      <td>Marlon</td>
+      <td>+57 304 456 7890</td>
+      <td>marlon@soporte.com</td>
+    </tr>
+    <tr>
+      <td>Karina</td>
+      <td>+57 305 567 8901</td>
+      <td>karina@soporte.com</td>
+    </tr>
+  </table>
+
+  <h2>Horarios de Atención</h2>
+  <p>Lunes a Viernes: 8:00 AM – 6:00 PM<br>Sábados: 9:00 AM – 1:00 PM<br>Domingos y festivos: Cerrado</p>
+
+  <form>
+    <h2>Formulario de Soporte</h2>
+    <label for="nombre">Tu nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="email">Tu correo electrónico:</label>
+    <input type="email" id="email" required>
+
+    <label for="problema">Describe tu problema:</label>
+    <textarea id="problema" rows="6" required></textarea>
+
+    <button type="submit">Enviar Solicitud</button>
+  </form>
+
+  <div class="faq">
+    <h2>Preguntas Frecuentes</h2>
+    <p><strong>❓ ¿Cómo reinicio mi contraseña?</strong><br>
+    Dirígete a la pantalla de inicio y haz clic en “¿Olvidaste tu contraseña?”.</p>
+
+    <p><strong>❓ ¿Por qué no veo los resultados de las compuertas?</strong><br>
+    Asegúrate de haber conectado correctamente los valores de entrada y elegido una compuerta lógica válida.</p>
+
+    <p><strong>❓ ¿Puedo acceder desde el celular?</strong><br>
+    Sí, el simulador funciona también en dispositivos móviles modernos.</p>
+  </div>
+
+  <a href="index m.html" class="back-button">← Regresar al Inicio del Simulador</a>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+  
+</body>
+</html>
